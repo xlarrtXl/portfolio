@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>restix — связаться</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Montserrat:wght@400;500;600&family=Source+Serif+4:ital,wght@1,400;1,500&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      /* стили только для страницы контактов */
+      .contact {
+        position: relative;
+        z-index: 10;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 1.5rem 1rem;
+      }
+
+      .contact__card {
+        width: 100%;
+        max-width: 34rem;
+        border-radius: 2rem;
+        padding: 2rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .contact__card > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .contact__card h1 {
+        margin-top: 1.25rem;
+        font-size: clamp(2rem, 8vw, 3.2rem);
+        letter-spacing: -.05em;
+        line-height: 1.05;
+      }
+
+      .contact__card h1 em {
+        color: rgba(255,255,255,.8);
+      }
+
+      .contact__bio {
+        margin-top: 1rem;
+        max-width: 24rem;
+        font-size: .9rem;
+        line-height: 1.6;
+        color: rgba(255,255,255,.6);
+      }
+
+      .links {
+        margin-top: 2rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+      }
+
+      .link {
+        display: flex;
+        align-items: center;
+        gap: 1.1rem;
+        border-radius: 1.5rem;
+        padding: 1rem 1.25rem;
+        text-align: left;
+      }
+
+      .link:hover {
+        background: rgba(255,255,255,.04);
+      }
+
+      .link__ico {
+        flex: none;
+        width: 48px;
+        height: 48px;
+        border-radius: 16px;
+        display: grid;
+        place-items: center;
+        background: rgba(255,255,255,.1);
+      }
+
+      .link__ico .ic {
+        width: 22px;
+        height: 22px;
+      }
+
+      .link__text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: .2rem;
+      }
+
+      .link__text b {
+        font-size: 1.1rem;
+        font-weight: 500;
+        letter-spacing: -.02em;
+      }
+
+      .link__text small {
+        font-size: .8rem;
+        color: rgba(255,255,255,.6);
+      }
+
+      .back {
+        margin-top: 1.75rem;
+        font-size: .85rem;
+        padding: .5rem 1.1rem .5rem .6rem;
+      }
+
+      .back .round {
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Фон -->
+    <div class="bg" aria-hidden="true">
+      <i class="blob blob--1"></i>
+      <i class="blob blob--2"></i>
+      <i class="blob blob--3"></i>
+      <i class="grain"></i>
+    </div>
+
+    <!-- Иконки -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </symbol>
+      <symbol id="i-send" viewBox="0 0 24 24">
+        <path d="m22 2-7 20-4-9-9-4Z M22 2 11 13"/>
+      </symbol>
+      <symbol id="i-insta" viewBox="0 0 24 24">
+        <rect x="2" y="2" width="20" height="20" rx="5"/>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z M17.5 6.5h.01"/>
+      </symbol>
+      <symbol id="logo" viewBox="0 0 256 256">
+        <path
+          fill="currentColor"
+          stroke="none"
+          d="M40 56a16 16 0 0 1 16-16h16a16 16 0 0 1 16 16v144a16 16 0 0 1-16 16H56a16 16 0 0 1-16-16Z M88 120C88 72 124 40 176 40H216V88H176C152 88 136 100 136 120Z M168 192a24 24 0 1 0 48 0a24 24 0 1 0-48 0Z"/>
+      </symbol>
+    </svg>
+    <main class="contact">
+      <section class="liquid-glass-strong contact__card">
+        <svg class="logo logo--lg">
+          <use href="#logo"/>
+        </svg>
+        <h1>
+          Давайте
+          <br>
+          <em>свяжемся</em>
+        </h1>
+        <p class="contact__bio">
+          Напишите мне в Telegram или загляните в Instagram — отвечу и обсудим вашу задачу.
+        </p>
+        <div class="links">
+          <a
+            class="liquid-glass link hover"
+            href="https://t.me/rayyyyyyzzz"
+            target="_blank"
+            rel="noopener">
+            <span class="link__ico">
+              <svg class="ic">
+                <use href="#i-send"/>
+              </svg>
+            </span>
+            <span class="link__text">
+              <b>Telegram</b>
+              <small>Написать напрямую</small>
+            </span>
+            <svg class="ic ic--dim">
+              <use href="#i-arrow"/>
+            </svg>
+          </a>
+          <a
+            class="liquid-glass link hover"
+            href="#"
+            data-soon>
+            <span class="link__ico">
+              <svg class="ic">
+                <use href="#i-insta"/>
+              </svg>
+            </span>
+            <span class="link__text">
+              <b>Instagram</b>
+              <small>Работы и рилсы</small>
+            </span>
+            <svg class="ic ic--dim">
+              <use href="#i-arrow"/>
+            </svg>
+          </a>
+        </div>
+        <a class="liquid-glass pill back hover" href="index.html">
+          <span class="round round--sm">
+            <svg class="ic">
+              <use href="#i-arrow"/>
+            </svg>
+          </span>
+          На главную
+        </a>
+      </section>
+    </main>
+    <!-- Всплывающее окно: Instagram ещё не добавлен -->
+    <dialog class="modal" id="soon">
+      <div class="modal__box liquid-glass-strong">
+        <div class="modal__ico">
+          <svg class="ic">
+            <use href="#i-insta"/>
+          </svg>
+        </div>
+        <h3>Instagram скоро появится</h3>
+        <p>Я пока не добавил ссылку на свой Instagram. Пока что пишите мне в Telegram.</p>
+        <button class="modal__btn liquid-glass hover" type="button" data-close>Понятно</button>
+      </div>
+    </dialog>
+
+    <script>
+      const soon = document.getElementById('soon');
+
+      // Любая ссылка с data-soon открывает окно вместо перехода
+      document.querySelectorAll('[data-soon]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          soon.showModal();
+        });
+      });
+
+      // Закрытие: кнопка или клик по тёмному фону
+      soon.addEventListener('click', function (e) {
+        if (e.target === soon || e.target.hasAttribute('data-close')) {
+          soon.close();
+        }
+      });
+    </script>
+  </body>
+</html>

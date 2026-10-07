@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>restix — монтаж, дизайн, вёрстка</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Poppins не имеет кириллицы, поэтому рядом Montserrat: он автоматически подхватывает русские буквы -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Montserrat:wght@400;500;600&family=Source+Serif+4:ital,wght@1,400;1,500&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- ===== БЛОК 0: СВОЙ ФОН (чистый CSS, без видео) ===== -->
+    <div class="bg" aria-hidden="true">
+      <i class="blob blob--1"></i>
+      <i class="blob blob--2"></i>
+      <i class="blob blob--3"></i>
+      <i class="grain"></i>
+    </div>
+
+    <!-- Набор иконок (рисуются один раз, дальше вызываются через <use>) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <symbol id="i-menu" viewBox="0 0 24 24">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </symbol>
+      <symbol id="i-send" viewBox="0 0 24 24">
+        <path d="m22 2-7 20-4-9-9-4Z M22 2 11 13"/>
+      </symbol>
+      <symbol id="i-insta" viewBox="0 0 24 24">
+        <rect x="2" y="2" width="20" height="20" rx="5"/>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z M17.5 6.5h.01"/>
+      </symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24">
+        <path d="M9.9 15.5A2 2 0 0 0 8.5 14.1l-6.1-1.6a.5.5 0 0 1 0-1L8.5 9.9A2 2 0 0 0 9.9 8.5l1.6-6.1a.5.5 0 0 1 1 0l1.6 6.1a2 2 0 0 0 1.4 1.4l6.1 1.6a.5.5 0 0 1 0 1l-6.1 1.6a2 2 0 0 0-1.4 1.4l-1.6 6.1a.5.5 0 0 1-1 0z"/>
+      </symbol>
+      <symbol id="logo" viewBox="0 0 256 256">
+        <path
+          fill="currentColor"
+          stroke="none"
+          d="M40 56a16 16 0 0 1 16-16h16a16 16 0 0 1 16 16v144a16 16 0 0 1-16 16H56a16 16 0 0 1-16-16Z M88 120C88 72 124 40 176 40H216V88H176C152 88 136 100 136 120Z M168 192a24 24 0 1 0 48 0a24 24 0 1 0-48 0Z"/>
+      </symbol>
+    </svg>
+    <div class="layout">
+
+      <!-- ===== БЛОК 1: ЛЕВАЯ ПАНЕЛЬ ===== -->
+      <main class="left">
+        <div class="liquid-glass-strong left__glass"></div>
+        <div class="left__content">
+
+          <!-- Навигация -->
+          <nav class="nav">
+            <a class="brand" href="#top">
+              <svg class="logo logo--sm">
+                <use href="#logo"/>
+              </svg>
+              <span>restix</span>
+            </a>
+          </nav>
+
+          <!-- Центр: заголовок, кнопка, плашки -->
+          <section class="hero" id="top">
+            <svg class="logo logo--lg">
+              <use href="#logo"/>
+            </svg>
+            <h1>
+              Монтаж, дизайн
+              <br>
+              <em>и вёрстка</em>
+            </h1>
+            <p class="hero__bio">
+              Монтирую клипы, эдиты и рилсы, дизайн сайтов в Figma
+            и верстаю их на HTML и CSS.
+            </p>
+            <a
+              class="liquid-glass-strong cta hover"
+              href="https://web.telegram.org/k/#-4465253284"
+              target="_blank"
+              rel="noopener">
+              Написать в Telegram
+              <span class="round">
+                <svg class="ic">
+                  <use href="#i-send"/>
+                </svg>
+              </span>
+            </a>
+            <div class="chips">
+              <span class="liquid-glass chip">Клипы и рилсы</span>
+              <span class="liquid-glass chip">Дизайн в Figma</span>
+              <span class="liquid-glass chip">Вёрстка</span>
+            </div>
+          </section>
+
+          <!-- Цитата внизу -->
+        </div>
+      </main>
+
+      <!-- ===== БЛОК 2: ПРАВАЯ ПАНЕЛЬ ===== -->
+      <aside class="right">
+
+        <!-- Верхняя панель: соцсети + кнопка -->
+        <div class="topbar">
+          <details class="burger">
+            <summary class="liquid-glass burger__btn" aria-label="Меню">
+              <span></span>
+              <span></span>
+              <span></span>
+            </summary>
+            <nav class="liquid-glass-strong burger__menu">
+              <a class="burger__item" href="contact.html">
+                <svg class="ic">
+                  <use href="#i-spark"/>
+                </svg>
+                Связаться
+              </a>
+              <a
+                class="burger__item"
+                href="https://web.telegram.org/k/#@rayyyyyyzzz"
+                target="_blank"
+                rel="noopener">
+                <svg class="ic">
+                  <use href="#i-send"/>
+                </svg>
+                Telegram
+              </a>
+              <a
+                class="burger__item"
+                href="#"
+                data-soon>
+                <svg class="ic">
+                  <use href="#i-insta"/>
+                </svg>
+                Instagram
+              </a>
+            </nav>
+          </details>
+        </div>
+
+        <!-- Блок навыков -->
+        <section class="liquid-glass features" id="skills">
+
+          <!-- Плашка 1: монтаж (Ae + Pr) -->
+          <details class="liquid-glass skill">
+            <summary>
+              <span class="icons">
+                <span class="icon3d icon3d--ae">Ae</span>
+                <span class="icon3d icon3d--pr">Pr</span>
+              </span>
+              <span class="skill__text">
+                <b>Видеомонтаж</b>
+                <small>Клипы, эдиты и рилсы</small>
+              </span>
+              <span class="plus"></span>
+            </summary>
+            <div class="skill__more">
+              <p>
+                Монтирую в After Effects и Premiere Pro: Делаю ролики с ритмом, музыкой и эффектами, которые держат внимание.
+              </p>
+              <ul class="tags">
+                <li>Клипы</li>
+                <li>Эдиты</li>
+                <li>Рилсы</li>
+                <li>Моушн</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Плашка 2: дизайн (Figma) -->
+          <details class="liquid-glass skill">
+            <summary>
+              <span class="icons">
+                <span class="icon3d icon3d--fg">
+                  <span class="fig">
+                    <i style="--c:#f24e1e;border-radius:9px 0 0 9px"></i>
+                    <i style="--c:#ff7262;border-radius:0 9px 9px 0"></i>
+                    <i style="--c:#a259ff;border-radius:9px 0 0 9px"></i>
+                    <i style="--c:#1abcfe;border-radius:50%"></i>
+                    <i style="--c:#0acf83;border-radius:9px 0 0 9px"></i>
+                  </span>
+                </span>
+              </span>
+              <span class="skill__text">
+                <b>Дизайн сайтов</b>
+                <small>Макеты в Figma</small>
+              </span>
+              <span class="plus"></span>
+            </summary>
+            <div class="skill__more">
+              <p>
+                Продумываю структуру и делаю аккуратные макеты — понятные посетителю и удобные для вёрстки.
+              </p>
+              <ul class="tags">
+                <li>UI-дизайн</li>
+                <li>Прототипы</li>
+                <li>Адаптив</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Плашка 3: вёрстка -->
+          <details class="liquid-glass skill">
+            <summary>
+              <span class="icons">
+                <span class="icon3d icon3d--code">&lt;/&gt;</span>
+              </span>
+              <span class="skill__text">
+                <b>Вёрстка</b>
+                <small>HTML и CSS</small>
+              </span>
+              <span class="plus"></span>
+            </summary>
+            <div class="skill__more">
+              <p>Превращаю макет в живой сайт: чистый код и плавные анимации.</p>
+              <ul class="tags">
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+          </details>
+        </section>
+
+        <!-- 3D-куб -->
+        <div class="liquid-glass stage" aria-hidden="true">
+          <div class="stage__glow"></div>
+          <div class="cube-wrap">
+            <div class="cube">
+              <div class="core"></div>
+              <div class="face f-front">
+                <span>Ae</span>
+              </div>
+              <div class="face f-back">
+                <span>Pr</span>
+              </div>
+              <div class="face f-right">
+                <span>&lt;/&gt;</span>
+              </div>
+              <div class="face f-left">
+                <svg class="logo">
+                  <use href="#logo"/>
+                </svg>
+              </div>
+              <div class="face f-top">
+                <svg class="ic">
+                  <use href="#i-spark"/>
+                </svg>
+              </div>
+              <div class="face f-bottom">
+                <span>Fg</span>
+              </div>
+            </div>
+            <div class="cube-shadow"></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <!-- Всплывающее окно: Instagram ещё не добавлен -->
+    <dialog class="modal" id="soon">
+      <div class="modal__box liquid-glass-strong">
+        <div class="modal__ico">
+          <svg class="ic">
+            <use href="#i-insta"/>
+          </svg>
+        </div>
+        <h3>Instagram скоро появится</h3>
+        <p>Я пока не добавил ссылку на свой Instagram. Пока что пишите мне в Telegram.</p>
+        <button class="modal__btn liquid-glass hover" type="button" data-close>Понятно</button>
+      </div>
+    </dialog>
+
+    <script>
+      const soon = document.getElementById('soon');
+
+      // Любая ссылка с data-soon открывает окно вместо перехода
+      document.querySelectorAll('[data-soon]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          soon.showModal();
+        });
+      });
+
+      // Закрытие: кнопка или клик по тёмному фону
+      soon.addEventListener('click', function (e) {
+        if (e.target === soon || e.target.hasAttribute('data-close')) {
+          soon.close();
+        }
+      });
+    </script>
+  </body>
+</html>
